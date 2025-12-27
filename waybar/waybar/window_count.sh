@@ -1,5 +1,5 @@
 function get_windows {
-    swaymsg -t get_workspaces | jq -r '.[] | select(.focused) | .focus | length - 1 | if (. > 0) then "+" + (. | tostring) + " more" else "show all" end'
+    swaymsg -t get_workspaces | jq -r '.[] | select(.focused) | .focus | length - 1 | if (. > 0) then "+" + (. | tostring) + " more" else "show all windows" end'
 }
 
 LAST=$(get_windows)

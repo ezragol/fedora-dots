@@ -32,18 +32,16 @@
     // Modules configuration
     "sway/window#icon": {
         "format": "{app_id}",
-        "all-outputs": true,
         "max-length": 40,
         "rewrite": {
-            "code": "󰨞",
-            "org.mozilla.firefox": "󰈹",
-            "foot": "󰧚",
-            "spotify": "󰓇"
+            "code": "󰨞 ",
+            "org.mozilla.firefox": "󰈹 ",
+            "foot": "󰧚 ",
+            "spotify": "󰓇 "
         }
     },
     "sway/window": {
-        "format": "{title}{app_id}",
-        "all-outputs": true,
+        "format": " {title}{app_id}",
         "max-length": 50,
         "rewrite": {
             "(.*) - Visual Studio Codecode": "$1",
@@ -52,7 +50,8 @@
             "Mozilla Firefoxorg.mozilla.firefox": "firefox",
             "footfoot": "terminal",
             "([^-]*) - (.*)spotify": "$2",
-            "Spotify Premiumspotify": "spotify"
+            "Spotify Premiumspotify": "spotify",
+            " ": "desktop "
         }
     },
     "bluetooth": {
@@ -274,7 +273,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format": "  ",
+        "format": "  ",
         "tooltip": false,
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder

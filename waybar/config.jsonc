@@ -33,7 +33,6 @@
     // Modules configuration
     "sway/window#icon": {
         "format": "{app_id}",
-        "all-outputs": true,
         "max-length": 40,
         "rewrite": {
             "code": "󰨞",
@@ -44,7 +43,6 @@
     },
     "sway/window": {
         "format": "{title}{app_id}",
-        "all-outputs": true,
         "max-length": 50,
         "rewrite": {
             "(.*) - Visual Studio Codecode": "$1",
@@ -244,7 +242,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format": "  ",
+        "format": "  ",
         "tooltip": false,
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
